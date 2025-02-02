@@ -1,0 +1,15 @@
+.{
+    .name = "zgui-sdl3gpu-example",
+    .version = "0.0.0",
+    .dependencies = .{
+        .zgui = .{
+            .url = "https://github.com/PMarcL/zgui/archive/refs/heads/sdl3-gpu-support.tar.gz",
+            .hash = "12208262aedf1a87788b683bdc9aa12c014ff5d2386ab8ba8ff35945e64fdf44bd7b",
+        },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+    },
+}

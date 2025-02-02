@@ -1,0 +1,7 @@
+# Zig directories to ignore.
+.zig-cache/
+zig-out/
+# Ignore imgui artifacts.
+imgui.ini
+# Ignore RemedyBG session files.
+*.rdbg
