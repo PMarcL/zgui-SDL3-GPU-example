@@ -12,17 +12,19 @@ from [imgui](https://github.com/ocornut/imgui/tree/master) and
 [this one](https://github.com/zig-gamedev/zig-gamedev/blob/main/samples/minimal_zgui_glfw_gl/src/minimal_zgui_glfw_gl.zig)
 from the [zig-gamedev](https://github.com/zig-gamedev/zig-gamedev/tree/main) samples.
 
-
 Finally, this was only tested on Windows, but should work on other platforms.
 
 ## Building and Running
 
 ```
-# 1. Build the SDL3 .dll
+# 1. Fetch the SDL repo
+git submodule init
+git submodule udpate
+# 2. Build the SDL3 .dll
 cd SDL
 mkdir build && cd build
 cmake -G "MinGW Makefiles" .. && cmake --build .
 cd ../..
-# Run the example
+# 3. Run the example
 zig build run
 ```
