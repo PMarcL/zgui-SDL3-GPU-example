@@ -61,12 +61,11 @@ pub fn main() !void {
     //zgui.getStyle().setColorsLight();
 
     // Setup Platform/Renderer backends
-    zgui.backend.init(
-        window.?,
-        device.?,
-        c.SDL_GetGPUSwapchainTextureFormat(device, window),
-        c.SDL_GPU_SAMPLECOUNT_1,
-    );
+    zgui.backend.init(window.?, .{
+        .device = device.?,
+        .color_target_format = c.SDL_GetGPUSwapchainTextureFormat(device, window),
+        .msaa_samples = c.SDL_GPU_SAMPLECOUNT_1,
+    });
     defer zgui.backend.deinit();
 
     // Main loop

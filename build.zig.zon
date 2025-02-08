@@ -3,8 +3,8 @@
     .version = "0.0.0",
     .dependencies = .{
         .zgui = .{
-            .url = "https://github.com/PMarcL/zgui/archive/refs/heads/sdl3-gpu-support.tar.gz",
-            .hash = "12208262aedf1a87788b683bdc9aa12c014ff5d2386ab8ba8ff35945e64fdf44bd7b",
+            .url = "https://github.com/PMarcL/zgui/archive/refs/heads/sdl3gpu-backend.tar.gz",
+            .hash = "1220a2c6d3978249cb9d64905f36236bad95a1f97c2c5c89ec513fa6eb88518f6c5d",
         },
     },
     .paths = .{
