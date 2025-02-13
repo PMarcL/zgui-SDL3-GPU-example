@@ -4,7 +4,7 @@
     .dependencies = .{
         .zgui = .{
             .url = "https://github.com/PMarcL/zgui/archive/refs/heads/sdl3gpu-backend.tar.gz",
-            .hash = "1220a2c6d3978249cb9d64905f36236bad95a1f97c2c5c89ec513fa6eb88518f6c5d",
+            .hash = "122052612a864529ee98c95d7efc55ccd3d3f214a52b9352e0c773473ba92b6b7901",
         },
     },
     .paths = .{

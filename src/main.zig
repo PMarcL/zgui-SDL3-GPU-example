@@ -81,11 +81,12 @@ pub fn main() !void {
 
         var fb_width: c_int = 0;
         var fb_height: c_int = 0;
-        if (!c.SDL_GetWindowSizeInPixels(window, &fb_width, &fb_height)) {
+        if (!c.SDL_GetWindowSize(window, &fb_width, &fb_height)) {
             std.log.err("SDL_GetWindowSizeInPixels failed: {s}\n", .{c.SDL_GetError()});
             return;
         }
-        zgui.backend.newFrame(@intCast(fb_width), @intCast(fb_height));
+        const fb_scale = c.SDL_GetWindowDisplayScale(window);
+        zgui.backend.newFrame(@intCast(fb_width), @intCast(fb_height), fb_scale);
 
         // Show a simple window
         zgui.setNextWindowPos(.{ .x = 20.0, .y = 20.0, .cond = .first_use_ever });
